@@ -1,0 +1,151 @@
+/* Basic resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+  background: #0078ff;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Nav container */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Site title */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Links - desktop */
+.links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.links li a:hover {
+  color: #ffdd59;
+}
+
+/* Search */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.search-input {
+  width: 0;
+  padding: 0;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  transition: width 0.4s ease, padding 0.4s ease;
+  opacity: 0;
+}
+
+.search-input.active {
+  width: 200px;
+  padding: 8px 12px;
+  opacity: 1;
+  border: none;
+  border-radius: 30px;
+}
+
+/* Search icon */
+.search-icon {
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* Hamburger */
+.togglebtn {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Mobile dropdown menu */
+.dropdown_menu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  background: #0078ff;
+  position: absolute;
+  box-sizing: 90px;
+  top: 60px;
+  right: 0;
+  width: 200px;
+}
+
+.dropdown_menu li {
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.dropdown_menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown_menu li a:hover {
+  background: #005fcc;
+}
+
+/* Show mobile menu when open */
+.dropdown_menu.open {
+  display: flex;
+}
+
+/* Footer */
+footer {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background: #f2f2f2;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .togglebtn {
+    display: block;
+  }
+
+  .search-container {
+    margin-right: 10px;
+    display: block;
+  }
+  .search-container .search-input{
+    display: block;
+  }
+}
